@@ -1,31 +1,29 @@
-# Adonis fullstack application
+# Adonis Coingecko Project
+This project fetches data from the Coingecko API and stores it in a MySQL database.
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+# Setup
+Install dependencies by running the following command:
+npm install
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+# Configure the MySQL database connection in the .env file.
 
-## Setup
+DB_CONNECTION=mysql
+DB_HOST=your_host
+DB_PORT=your_port
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_DATABASE=your_database
 
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
+# Run the database migrations to set up the necessary tables:
 adonis migration:run
-```
+
+# Usage
+To fetch data from the Coingecko API and store it in the MySQL database, run the following command:
+
+adonis fetch:coingecko-data
+
+
+This command will fetch the data from the Coingecko API and insert it into the coingecko_data table in the MySQL database.
+
+Make sure your MySQL server is running and the database connection configuration in the .env file is correct.
+
